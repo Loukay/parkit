@@ -1,9 +1,8 @@
 import { Router } from 'express';
+import { uploadImage } from '../services/imageUploader.js';
 
 const router = Router();
 
-router.post('/', function (req, res, next) {
-  res.send('respond with a resoursce');
-});
+router.post('/', uploadImage);
 
 export { router as imagesRouter };
